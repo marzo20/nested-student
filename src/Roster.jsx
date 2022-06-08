@@ -4,7 +4,16 @@ import Student from './Student'
 class Roster extends Component{
     render() {
         return(
-            <Student />
+            <> 
+            {this.props.students.map((student, index) => (
+                <Student 
+                student={student}
+                key={`Student-${index}`}
+                />
+            ))}
+            </>
+          
+            
         )
     }
 }
